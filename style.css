@@ -73,13 +73,20 @@ form {
     transition: .3s ease-in-out;
 }
 
+.input-border.error {
+    background: red;
+  }
+  
+  .input-border.error::after {
+    background: red;
+  }
+
 /*Efeitos da borda crescendo embaixo do input*/
 .login-input:focus + .input-border::after{
     width: 100%;
 
 
 }
-
 
 .login-submit {
     height: 48px;
@@ -100,6 +107,23 @@ form {
 .login-submit:hover {
     background-position: right;
 }
+
+.login-submit:disabled {
+    background: #acacac;
+    cursor: not-allowed;
+  }
+  
+  .login-submit:hover {
+    background-position: right;
+  }
+  
+  .login-submit.success {
+    background: rgb(18, 151, 107);
+  }
+  
+  .login-submit.error {
+    background: red;
+  }
 
 .login-reset {
     color: #a5a5a5;
